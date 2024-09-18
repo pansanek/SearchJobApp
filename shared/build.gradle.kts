@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-
+    api(libs.viewBindingDelegate)
     api(libs.androidx.core.ktx)
     api(libs.androidx.appcompat)
     api(libs.material)
