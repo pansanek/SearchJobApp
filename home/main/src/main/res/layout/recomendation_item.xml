@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:backgroundTint="@android:color/black"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="onRecommendationClick"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Иконка (отображается в зависимости от идентификатора) -->
+        <FrameLayout
+            android:id="@+id/iconCircle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_bg">
+
+            <!-- Иконка (отображается в зависимости от идентификатора) -->
+            <ImageView
+                android:id="@+id/recommendationIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_star" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок рекомендации -->
+            <TextView
+                android:id="@+id/recommendationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Поднять резюме в поиске"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <!-- Текст кнопки или выделенный текст -->
+            <TextView
+                android:id="@+id/recommendationButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Поднять"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
